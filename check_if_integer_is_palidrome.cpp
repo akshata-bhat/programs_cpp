@@ -49,8 +49,10 @@ public:
     
 
     bool isPalindrome(int x) {
+	// Negative numbers are not Palindromes    
 	if(x < 0)
 		return false;
+	// This is for the case when 0440 is passed: the number will be read as 440 and it will not be a palindrome
 	else if(x%10 ==0)
 		return false;
 	else{
@@ -110,7 +112,6 @@ int main (int argc, char *argv[]){
 
 	bool result;
 	int number = atoi(argv[1]); 
-	cout << number;
 	result = ans1.isPalindrome(number);
 	if(result)
 		cout << number << " is a Palindrome" << endl;
