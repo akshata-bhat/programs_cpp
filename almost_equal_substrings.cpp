@@ -24,7 +24,7 @@ void print_substrings(vector<int> lengths, string str){
 }	
 
 int main(){
-	string str = "abcdefghij";
+	string str = "abcdefghi";
 	int n = 3;
 	int sub_len, len = str.length();
 

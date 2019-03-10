@@ -10,6 +10,7 @@ struct node{
 
 node* create_newnode(int value){
 	node* temp = new node();
+	cout << temp << "\n" << endl;
 	temp->data = value;
 	temp->left = NULL;
 	temp->right = NULL;
@@ -18,7 +19,7 @@ node* create_newnode(int value){
 
 node* insert_node(struct node* temp, int value){
 	if(temp == NULL) return create_newnode(value);
-	
+	cout << "inside insert: " << temp << endl;	
 	if(value < temp->data)
 		temp->left = insert_node(temp->left, value);
 	else if(value > temp->data)
@@ -53,18 +54,35 @@ void postOrder(node *root) {
 
 int main(){
 	node* root = NULL;
-	root = insert_node(root, 50);
+	cout << "Root: " << root << endl;
+	root = insert_node(root, 80);
+        cout << "Root: " << root << endl;
+
 	insert_node(root, 30);
+        cout << "Root: " << root << endl;
+
 	insert_node(root, 20);
-	insert_node(root, 40);
-	insert_node(root, 70);
+        cout << "Root: " << root << endl;
+
 	insert_node(root, 60);
-	insert_node(root, 80);
+	insert_node(root, 90);
+
+        cout << "Root: " << root << endl;
+	insert_node(root, 70);
+        cout << "Root: " << root << endl;
+
+	insert_node(root, 40);
+        cout << "Root: " << root << endl;
+	insert_node(root, 50);
+        cout << "Root: " << root << endl;
 	cout << "PostOrder" << endl; 
 	postOrder(root);
+        cout << "Root: " << root << endl;
 	cout << "Preorder" << endl;
 	preOrder(root);
+        cout << "Root: " << root << endl;
 	cout << "Inorder" << endl;	
+        cout << "Root: " << root << endl;
 	inOrder(root);
 	return 0;
 }
