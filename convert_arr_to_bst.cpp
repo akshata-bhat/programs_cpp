@@ -54,7 +54,7 @@ void postOrder(Tnode* root){
 }
 
 int main(){
-        int arr[] = {1, 2, 3, 4, 5, 6, 7};
+        int arr[] = {-10,-3,0,5,9};
         int n = sizeof(arr)/sizeof(arr[0]);
         Tnode* root = convert_arr_to_BST(arr, 0, n-1);
 	cout << "PreOrder: " << endl;

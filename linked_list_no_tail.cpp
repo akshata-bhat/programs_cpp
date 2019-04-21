@@ -40,11 +40,14 @@ class list{
 
 		void insert_node_at_start(int value){
 			Node* new_node = new Node();
-			if(head == NULL)
+			new_node->data = value;	
+			if(head == NULL){
 				head = new_node;
-			new_node->data = value;
-			new_node->next = head;
-			head = new_node;
+				new_node->next = NULL;
+			} else {
+				new_node->next = head;
+				head = new_node;
+			}	
 		}
 		
 		void delete_node_at_start(){
